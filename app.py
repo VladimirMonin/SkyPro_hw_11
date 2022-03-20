@@ -1,5 +1,5 @@
 from flask import Flask, request, render_template
-from utils import load_candidates, get_candidate_by_id
+from utils import load_candidates, get_candidate_by_id, get_candidate_by_name
 
 candidates = load_candidates()
 app = Flask(__name__)
@@ -13,6 +13,11 @@ def get_list():
 def get_by_id(id):
     candidates_dict = get_candidate_by_id(id, candidates)
     return render_template('card.html', candidate=candidates_dict)
+
+@app.route('/search/<candidate_name>')
+def get_by_name(candidate_name):
+    return render_template()
+    pass
 
 
 app.run(debug=True)
