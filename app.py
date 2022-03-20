@@ -9,5 +9,11 @@ app = Flask(__name__)
 def get_list():
     return render_template('list.html', candidates=candidates)
 
+
+@app.route('/candidate<x>')
+def get_by_id(x):
+    return render_template('card.html', candidates=candidates)
+
+
 app.run(debug=True)
 
