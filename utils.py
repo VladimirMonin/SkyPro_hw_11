@@ -31,8 +31,6 @@ def get_candidate_by_id(user_id, candidates_list):
                 'picture': candidate["picture"],
                 'skills': candidate["skills"],
             }
-
-
     return candidate_dict
 
 def get_candidate_by_name():
