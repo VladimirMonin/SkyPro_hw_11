@@ -22,7 +22,7 @@ def get_by_name(candidate_name):
 @app.route('/skills/<skill>')
 def get_by_skill(skill):
     find_candidates = get_candidate_by_skill(skill, candidates)
-    return render_template('skill.html',candidates=find_candidates, candidates_len = len(find_candidates))
+    return render_template('skill.html',candidates=find_candidates, candidates_len = len(find_candidates), skill=skill)
 
 app.run(debug=True)
 
