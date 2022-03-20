@@ -37,14 +37,15 @@ def get_candidate_by_name(user_name, candidates_list):
     for candidate in candidates_list:
         if user_name.lower() in candidate['name'].lower():
             find_list.append(candidate)
-
     return find_list
 
 
-    pass
-
-
-def get_candidate_by_skill():
-    pass
+def get_candidate_by_skill(skill, candidates_list):
+    find_list = []
+    for candidate in candidates_list:
+        skill_list = candidate['skills'].lower().split(', ')
+        if skill.lower() in skill_list:
+            find_list.append(candidate)
+    return find_list
 
 
