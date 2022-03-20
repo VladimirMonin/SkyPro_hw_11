@@ -8,7 +8,7 @@
 <h1>Все кандидаты &#128526;</h1>
 
 {% for candidate in candidates %}
-    <p>{{ candidate.name }}</p>
+    <p>&#707; <a href="/candidate/{{candidate.id}}">{{ candidate.name }}</a></p>
 {% endfor %}
 </body>
 </html>
