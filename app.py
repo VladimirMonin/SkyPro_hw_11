@@ -16,8 +16,8 @@ def get_by_id(id):
 
 @app.route('/search/<candidate_name>')
 def get_by_name(candidate_name):
-    return render_template()
-    pass
+    find_candidates = get_candidate_by_name(candidate_name, candidates)
+    return render_template('search.html', candidates=find_candidates, candidates_len = len(find_candidates))
 
 
 app.run(debug=True)

@@ -33,7 +33,12 @@ def get_candidate_by_id(user_id, candidates_list):
     return candidate_dict
 
 def get_candidate_by_name(user_name, candidates_list):
-    return [user_name for user_name in candidates_list if user_name in candidates_list['name']]
+    find_list = []
+    for candidate in candidates_list:
+        if user_name.lower() in candidate['name'].lower():
+            find_list.append(candidate)
+
+    return find_list
 
 
     pass
