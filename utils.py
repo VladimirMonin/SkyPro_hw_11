@@ -1,7 +1,7 @@
 import json
 from flask import Flask
 
-__candidates = []
+
 
 def load_candidates(filename='candidates.json'):
     """
@@ -9,11 +9,10 @@ def load_candidates(filename='candidates.json'):
     :param filename: По умолчанию questions.json
     :return: Словарь
     """
-    global __candidates
     file = open(filename, encoding='UTF-8')
-    __candidates = json.load(file)
+    candidates = json.load(file)
     file.close()
-    return __candidates
+    return candidates
 
 
 def get_candidate_by_id():
@@ -27,7 +26,4 @@ def get_candidate_by_name():
 def get_candidate_by_skill():
     pass
 
-
-def main():
-    load_candidates()
 
