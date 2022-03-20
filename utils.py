@@ -25,15 +25,15 @@ def get_candidate_by_id(user_id, candidates_list):
     candidate_string = ''
     for candidate in candidates_list:
         if candidate["id"] == int(user_id):
-            candidate_string += f'<h1>Имя кандидата - {candidate["name"]}</h1>' \
-                                f'<p>Позиция кандидата - {candidate["position"]}</p>\n\n' \
-                                f'<img src = "{candidate["picture"]}">\n\n' \
-                                f'<p>Навыки: {candidate["skills"]}</p>'
+            candidate_dict = {
+                'name': candidate["name"],
+                'position': candidate["position"],
+                'picture': candidate["picture"],
+                'skills': candidate["skills"],
+            }
 
-            break
-    else:
-        candidate_string += f'<h1>Кандидат не найден</h1>'
-    return candidate_string
+
+    return candidate_dict
 
 def get_candidate_by_name():
     pass
