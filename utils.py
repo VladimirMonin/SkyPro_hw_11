@@ -22,7 +22,6 @@ def get_candidate_by_id(user_id, candidates_list):
     :param user_id:
     :return:
     """
-    candidate_string = ''
     for candidate in candidates_list:
         if candidate["id"] == int(user_id):
             candidate_dict = {

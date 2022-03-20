@@ -9,7 +9,7 @@ def get_list():
     return render_template('list.html', candidates=candidates)
 
 
-@app.route('/candidate<int:id>')
+@app.route('/candidate/<int:id>')
 def get_by_id(id):
     candidates_dict = get_candidate_by_id(id, candidates)
     return render_template('card.html', candidate=candidates_dict)
