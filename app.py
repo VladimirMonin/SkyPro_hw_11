@@ -10,8 +10,8 @@ def get_list():
     return render_template('list.html', candidates=candidates)
 
 
-@app.route('/candidate<x>')
-def get_by_id(x):
+@app.route('/candidate<id>')
+def get_by_id(id):
     return render_template('card.html', candidates=candidates)
 
 
