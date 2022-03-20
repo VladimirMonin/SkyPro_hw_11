@@ -28,15 +28,6 @@ def get_candidate_by_skill():
     pass
 
 
-# ЗАГРУЗКА ВОПРОСОВ в список
-candidates_list = load_candidates()
+def main():
+    load_candidates()
 
-# ЗАПУСК ПРИЛОЖЕНИЯ ФЛАСК
-app = Flask(__name__)
-
-@app.route("/")
-def page_index():
-    all_candidates = candidates_list
-    return f"<pre>{all_candidates}<pre>"
-
-app.run()
